@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@1&family=Catamaran:wght@400;500&family=Montserrat:wght@200;400&family=Poppins:wght@200;300;400&family=Raleway:wght@200;300&family=Tangerine:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #bfdbfe;
+}
+
+.wrapper {
+  background: #fff;
+  padding: 35px;
+  max-width: 1000px;
+  border-radius: 13px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.wrapper .icons {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.icons:first-child {
+  left: 0;
+  display: none;
+  background: linear-gradient(90deg, #fff 70%, transparent);
+}
+
+.icons:last-child {
+  right: 0;
+  justify-content: flex-end;
+  background: linear-gradient(-90deg, #fff 70%, transparent);
+}
+
+.icons i {
+  width: 55px;
+  height: 55px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 50%;
+  background: #d8d5f2;
+}
+
+.icons i:hover {
+  background: #efedfb;
+}
+
+.icons:first-child i {
+  margin-left: 15px;
+}
+
+.icons:last-child i {
+  margin-right: 15px;
+}
+
+.wrapper .tabs-box {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.tabs-box.dragging {
+  scroll-behavior: auto;
+  cursor: grab;
+}
+
+.tabs-box .tab {
+  cursor: pointer;
+  font-size: 1.18rem;
+  white-space: nowrap;
+  background: #f5f4fd;
+  padding: 13px 20px;
+  border-radius: 30px;
+  border: 1px solid #d8d5f2;
+}
+
+.tabs-box.dragging .tab {
+  user-select: none;
+  pointer-events: none;
+}
+
+.tabs-box .tab.active {
+  color: #fff;
+  background: #bfdbfe;
+  border-color: transparent;
+}
